@@ -5,8 +5,10 @@
 
 void AAuraEnemy::HighlightActor()
 {
+	bDrawDebug = true;
 }
 
 void AAuraEnemy::UnHighlightActor()
 {
+	bDrawDebug = false;
 }
