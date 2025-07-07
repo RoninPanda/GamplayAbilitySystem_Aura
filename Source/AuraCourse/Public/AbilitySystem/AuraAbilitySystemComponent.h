@@ -9,12 +9,16 @@
 /**
  * 
  */
+DECLARE_MULTICAST_DELEGATE_OneParam(FEffectAssetTags, const FGameplayTagContainer& /* Asset Tags */);
+
 UCLASS()
 class AURACOURSE_API UAuraAbilitySystemComponent : public UAbilitySystemComponent
 {
 	GENERATED_BODY()
 public:
 	void AbilityActorInfoSet();
+	FEffectAssetTags EffectAssetTags;
+	
 protected:
 	void EffectApplied(UAbilitySystemComponent* AbilitySystemComponent, const FGameplayEffectSpec& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle);
 };
